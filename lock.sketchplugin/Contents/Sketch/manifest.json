@@ -2,12 +2,14 @@
   "name": "symbol-lock",
   "description": "Plugins to lock symbols and text layers",
   "author": "Mauricio Palma",
+  "email": "mauricio.palma@sinnerschrader.com",
   "homepage": "https://github.com/sinnerschrader/sketch-symbol-lock",
-  "version": 0.1,
+  "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
+  "version": 0.1.0,
   "commands": [
 
   ],
   "menu": {
-    
+
   }
 }
