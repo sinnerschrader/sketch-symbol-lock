@@ -1,0 +1,4 @@
+var run = function(context) {
+	var app = [NSApplication sharedApplication];
+	[app displayDialog: "Hello world" withTitle:"Symbol Lock"];
+}
