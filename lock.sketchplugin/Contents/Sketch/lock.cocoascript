@@ -5,8 +5,3 @@ var lock = function(context) {
 var unlock = function(context) {
 	[[NSApplication sharedApplication] displayDialog:"Bye world" withTitle:"Sketch Lock"];
 }
-
-var onAction = function(context) {
-  log("I got told about an event " + context.action);
-  log("Context: " + context.actionContext);
-}
