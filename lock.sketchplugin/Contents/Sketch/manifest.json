@@ -14,12 +14,20 @@
       "script" : "lock.sketchscript",
       "handler" : "lock",
       "shortcut": ""
+    },
+    {
+      "name" : "Unlock",
+      "identifier" : "unlock",
+      "script" : "lock.sketchscript",
+      "handler" : "unlock",
+      "shortcut": ""
     }
   ],
   "menu": {
     "title": "Symbol Lock",
     "items": [
-      "lock"
+      "lock",
+      "unlock"
     ]
   }
 }

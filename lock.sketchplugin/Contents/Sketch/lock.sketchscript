@@ -1,4 +1,7 @@
-var run = function(context) {
-	var app = [NSApplication sharedApplication];
-	[app displayDialog: "Hello world" withTitle:"Symbol Lock"];
+var lock = function(context) {
+	[[NSApplication sharedApplication] displayDialog:"Hello world" withTitle:"Sketch Lock"];
+}
+
+var unlock = function(context) {
+	[[NSApplication sharedApplication] displayDialog:"Bye world" withTitle:"Sketch Lock"];
 }
