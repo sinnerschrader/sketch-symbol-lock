@@ -11,14 +11,14 @@
     {
       "name" : "Lock",
       "identifier" : "lock",
-      "script" : "lock.sketchscript",
+      "script" : "lock.cocoascript",
       "handler" : "lock",
       "shortcut": ""
     },
     {
       "name" : "Unlock",
       "identifier" : "unlock",
-      "script" : "lock.sketchscript",
+      "script" : "lock.cocoascript",
       "handler" : "unlock",
       "shortcut": ""
     }
