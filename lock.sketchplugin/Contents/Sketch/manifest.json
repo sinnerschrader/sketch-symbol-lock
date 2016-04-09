@@ -13,7 +13,7 @@
         "name": "Lock",
         "handlers": {
             "actions": {
-                "*": "logActions"
+                "*": "getSymbol"
             }
         }
     }
