@@ -1,6 +1,5 @@
-var document = context.document;
-var data = document.documentData();
-var symbolList = [];
+var currentPage = context.document.currentPage();
+var layerList = currentPage.layers().array();
 
 var toggleSymbolLock = function(context) {
 	for (var i = layerList.count() - 1; i >= 0; i--) {
