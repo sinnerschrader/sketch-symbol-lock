@@ -1,7 +1,9 @@
+
+
+var toggleSymbolLock = function(context) {
 var currentPage = context.document.currentPage();
 var layerList = currentPage.layers().array();
 
-var toggleSymbolLock = function(context) {
 	for (var i = layerList.count() - 1; i >= 0; i--) {
 		try {
 			if (layerList[i].symbolID() != 0) {
@@ -13,12 +15,4 @@ var toggleSymbolLock = function(context) {
 			log(e);
 		}
 	}
-}
-
-var unlock = function(context) {
-	[[NSApplication sharedApplication] displayDialog:"Bye world" withTitle:"Sketch Lock"];
-}
-
-var logActions = function(context) {
-	log(context.action);
 }

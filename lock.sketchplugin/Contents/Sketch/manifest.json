@@ -6,18 +6,20 @@
   "homepage": "https://github.com/sinnerschrader/sketch-symbol-lock",
   "compatibleVersion": "3.3.7",
   "version": "0.1.0",
+  "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
   "commands" : [
     {
-        "script": "lock.cocoascript",
-        "name": "Lock",
-        "handlers": {
-            "actions": {
-                "lock": "toggleSymbolLock",
-                "*": "logActions"
-            }
-        },
-        "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
+      "script" : "lock.cocoascript",
+      "name" : "Lock",
+      "identifier" : "lock",
+      "handler" : "toggleSymbolLock",
+      "shortcut" : ""
     }
-    ],
-    "identifier": "com.github.sinnerschrader.sketch-symbol-lock"
+  ],
+  "menu": {
+    "title": "Sketch Symbol Lock",
+    "items": [
+      "lock"
+    ]
+  }
 }
