@@ -12,7 +12,7 @@
         "name": "Lock",
         "handlers": {
             "actions": {
-                "lock": "getSymbol",
+                "lock": "toggleSymbolLock",
                 "*": "logActions"
             }
         },
