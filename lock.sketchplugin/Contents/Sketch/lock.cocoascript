@@ -1,6 +1,5 @@
-var document = context.document;
-var data = document.documentData();
-var symbolList = [];
+var currentPage = context.document.currentPage();
+var layerList = currentPage.layers().array();
 
 var lock = function(context) {
 	[[NSApplication sharedApplication] displayDialog:"Hello world" withTitle:"Sketch Lock"];
@@ -15,12 +14,15 @@ var logActions = function(context) {
 }
 
 var getSymbol = function(context) {
-	var symbols = data.allSymbols();
-	symbolList.push(symbols);
-	log(symbolList + 'these are the symbols in the document $$$$$$$');
-}
-
-for(var i=0; i < symbolList.length(); i++) {
-	var layer = symbolList.objectAtIndex(i);
-	layer.setIsLocked(true);
+	for (var i = layerList.count() -1; i >= 0; i--) {
+		try {
+			if (layerList[i].symbolID() != 0) {
+				layerList[i].setIsLocked(true);
+				log('The symbol is now locked')
+			}
+		}
+		catch(e) {
+			log(e);
+		}
+	}
 }
