@@ -4,7 +4,6 @@
   "author": "Mauricio Palma",
   "email": "mauricio.palma@sinnerschrader.com",
   "homepage": "https://github.com/sinnerschrader/sketch-symbol-lock",
-  "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
   "compatibleVersion": "3.3.7",
   "version": "0.1.0",
   "commands" : [
@@ -13,16 +12,11 @@
         "name": "Lock",
         "handlers": {
             "actions": {
-                "*": "logActions"
+                "*": "getSymbol"
             }
-        }
+        },
+        "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
     }
-  ],
-  "menu": {
-    "title": "Symbol Lock",
-    "items": [
-      "lock",
-      "unlock"
-    ]
-  }
+    ],
+    "identifier": "com.github.sinnerschrader.sketch-symbol-lock"
 }

@@ -1,3 +1,8 @@
+@import 'utility.js';
+
+var symbolList = [];
+
+
 var lock = function(context) {
 	[[NSApplication sharedApplication] displayDialog:"Hello world" withTitle:"Sketch Lock"];
 }
@@ -8,4 +13,9 @@ var unlock = function(context) {
 
 var logActions = function(context) {
 	log(context.action);
+}
+
+var getSymbol = function(context) {
+	var symbols = MSSymbolInstance;
+	log(symbols + '$$$$$$$');
 }
