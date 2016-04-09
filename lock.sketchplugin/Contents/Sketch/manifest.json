@@ -12,8 +12,15 @@
       "script" : "lock.cocoascript",
       "name" : "Lock",
       "identifier" : "lock",
-      "handler" : "toggleSymbolLock",
+      "handler" : "lock",
       "shortcut" : "ctrl shift l"
+    },
+    {
+      "script" : "lock.cocoascript",
+      "name" : "Unlock",
+      "identifier" : "unlock",
+      "handler" : "unlock",
+      "shortcut" : "ctrl shift u"
     },
     {
       "script" : "lock.cocoascript",
@@ -30,7 +37,8 @@
   "menu": {
     "title": "Sketch Symbol Lock",
     "items": [
-      "lock"
+      "lock",
+      "unlock"
     ]
   }
 }
