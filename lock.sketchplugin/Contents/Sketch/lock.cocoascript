@@ -2,7 +2,6 @@
 
 var symbolList = [];
 
-
 var lock = function(context) {
 	[[NSApplication sharedApplication] displayDialog:"Hello world" withTitle:"Sketch Lock"];
 }
@@ -18,4 +17,9 @@ var logActions = function(context) {
 var getSymbol = function(context) {
 	var symbols = MSSymbolInstance;
 	log(symbols + '$$$$$$$');
+}
+
+for(var i=0; i < symbolList.length(); i++) {
+	var layer = symbolList.objectAtIndex(i);
+	layer.setIsLocked(true);
 }
