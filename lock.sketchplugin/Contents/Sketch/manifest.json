@@ -12,7 +12,8 @@
         "name": "Lock",
         "handlers": {
             "actions": {
-                "*": "getSymbol"
+                "lock": "getSymbol",
+                "*": "logActions"
             }
         },
         "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
