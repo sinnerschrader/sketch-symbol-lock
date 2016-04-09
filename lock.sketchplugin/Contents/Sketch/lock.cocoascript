@@ -1,11 +1,19 @@
-
-
 var document = context.document;
 var data = document.documentData();
 var symbolList = [];
 
-var lock = function(context) {
-	[[NSApplication sharedApplication] displayDialog:"Hello world" withTitle:"Sketch Lock"];
+var toggleSymbolLock = function(context) {
+	for (var i = layerList.count() - 1; i >= 0; i--) {
+		try {
+			if (layerList[i].symbolID() != 0) {
+				layerList[i].setIsLocked(!layerList[i].isLocked());
+				log('The symbol is now locked');
+			}
+		}
+		catch(e) {
+			log(e);
+		}
+	}
 }
 
 var unlock = function(context) {
@@ -14,10 +22,4 @@ var unlock = function(context) {
 
 var logActions = function(context) {
 	log(context.action);
-}
-
-var getSymbol = function(context) {
-	var symbols = data.allSymbols();
-	symbolList.push(symbols);
-	log(symbolList + 'these are the symbols in the document $$$$$$$');
 }
