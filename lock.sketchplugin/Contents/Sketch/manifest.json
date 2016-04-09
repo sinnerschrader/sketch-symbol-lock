@@ -13,7 +13,7 @@
       "name" : "Lock",
       "identifier" : "lock",
       "handler" : "toggleSymbolLock",
-      "shortcut" : ""
+      "shortcut" : "ctrl shift l"
     }
   ],
   "menu": {
