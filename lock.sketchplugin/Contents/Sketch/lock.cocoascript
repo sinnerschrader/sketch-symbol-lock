@@ -14,3 +14,7 @@ var toggleSymbolLock = function(context) {
 		}
 	}
 }
+
+var onAction = function(context) {
+	log(context['action']);
+}
