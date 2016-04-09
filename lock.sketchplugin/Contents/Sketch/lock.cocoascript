@@ -6,15 +6,21 @@ var toggleSymbolLock = function(context) {
 		try {
 			if (layerList[i].symbolID() != undefined) {
 				layerList[i].setIsLocked(!layerList[i].isLocked());
-				log('The symbol is now locked');
+				var state;
+				if(layerList[i].isLocked()) {
+					state = 'locked'
+				} else {state = 'unlocked'
+				}
+				log('The symbol ' + layerList[i].name() + ' is now ' + state);
 			}
 		}
 		catch(e) {
 			log(e);
 		}
 	}
+
 }
 
 var onAction = function(context) {
-	log(context['action']);
+	//log(context);
 }

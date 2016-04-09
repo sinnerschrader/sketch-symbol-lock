@@ -4,7 +4,7 @@
   "author": "Mauricio Palma",
   "email": "mauricio.palma@sinnerschrader.com",
   "homepage": "https://github.com/sinnerschrader/sketch-symbol-lock",
-  "compatibleVersion": "3.3.7",
+  "compatibleVersion": "3.3.6",
   "version": "0.1.0",
   "identifier": "com.github.sinnerschrader.sketch-symbol-lock",
   "commands" : [
