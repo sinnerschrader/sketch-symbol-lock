@@ -5,7 +5,7 @@ var lock = function(context) {
 
 	for (i = layerList.count() - 1; i >= 0; i--) {
 		var layerListItem = layerList[i];
-		if (layerListItem.symbolID != undefined) {
+		if (layerListItem.isSymbol()) {
 			layerListItem.setIsLocked(true);
 			log('The symbol ' + layerListItem.name() + ' is now locked');
 		}
@@ -18,7 +18,7 @@ var unlock = function(context) {
 
 	for (var i = layerList.count() - 1; i >= 0; i--) {
 		var layerListItem = layerList[i];
-		if (layerListItem.symbolID != undefined) {
+		if (layerListItem.isSymbol()) {
 			layerListItem.setIsLocked(false);
 			log('The symbol ' + layerListItem.name() + ' is now unlocked');
 		}
