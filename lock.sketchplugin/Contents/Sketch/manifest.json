@@ -24,6 +24,13 @@
     },
     {
       "script" : "lock.cocoascript",
+      "name" : "Object Info",
+      "identifier" : "objectInfo",
+      "handler" : "objectInfo",
+      "shortcut" : ""
+    },
+    {
+      "script" : "lock.cocoascript",
       "name" : "",
       "identifier" : "",
       "shortcut" : "",
@@ -38,7 +45,8 @@
     "title": "Sketch Symbol Lock",
     "items": [
       "lock",
-      "symbols"
+      "symbols",
+      "objectInfo"
     ]
   }
 }
