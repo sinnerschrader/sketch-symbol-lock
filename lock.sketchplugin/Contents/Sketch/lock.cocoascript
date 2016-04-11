@@ -1,3 +1,5 @@
+// only works with 3.7 because of Event Listener Support
+
 var lock = function(context) {
 	var currentPage = context.document.currentPage();
 	var layerList = currentPage.layers().array();
@@ -5,30 +7,39 @@ var lock = function(context) {
 
 	for (i = layerList.count() - 1; i >= 0; i--) {
 		var layer = layerList[i];
-		if (layer.isSymbol()) {
+		if (layer.symbolID != undefined || layer.isSymbol() == true) { // 3.6 Support (Object.isSymbol())
 			var pattern = /\[\[.*?\]\]/; // searches for any text inside 2 brackets (eg. "[[example]]")
 			if (pattern.test(layer.name())) {
-				log(layer.name() + " already is locked");
+				log(layer.name() + " is already locked");
 			} else {
 				layer.setName("[[" + layer.name() + "]]");
+				log("locked layer " + layer.name());
 			}
 		}
 	}
 }
 
-var unlock = function(context) {
-	var currentPage = context.document.currentPage();
-	var layerList = currentPage.layers().array();
+var symbols = function(context) {
+	createSymbolsPage(context);
 
-	for (var i = layerList.count() - 1; i >= 0; i--) {
-		var layerListItem = layerList[i];
-		if (layerListItem.isSymbol()) {
-			layerListItem.setIsLocked(false);
-			log('The symbol ' + layerListItem.name() + ' is now unlocked');
-		}
+}
+
+function createSymbolsPage(context) {
+	var pages = context.document.pages();
+	var pageNames = "";
+	for(var i = pages.count() - 1; i >=0; i--) {
+		pageNames += pages[i].name() + ", ";
+	}
+
+	var pattern = /Symbols/;
+	if (!pattern.test(pageNames)){ // search if Symbolpage already exists
+		var symbolPage = context.document.addBlankPage();
+		symbolPage.setName('Symbols');
+	} else {
+		log("Symbols Page already exists");
 	}
 }
 
 var onAction = function(context) {
-	log(context);
+	//log(context);
 }
