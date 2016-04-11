@@ -1,28 +1,29 @@
+var symbolLocker = function (layerList, bool, logMsg) {
+	for (var i = layerList.count() - 1; i >= 0; i--) {
+		var item = layerList[i];
+		if (item.symbolID != undefined) {
+			item.setIsLocked(bool);
+			log('The symbol ' + item.name() + logMsg);
+		}
+	}
+}
+
 var lock = function(context) {
 	var currentPage = context.document.currentPage();
 	var layerList = currentPage.layers().array();
-	var i;
 
-	for (i = layerList.count() - 1; i >= 0; i--) {
-		var layerListItem = layerList[i];
-		if (layerListItem.symbolID != undefined) {
-			layerListItem.setIsLocked(true);
-			log('The symbol ' + layerListItem.name() + ' is now locked');
-		}
-	}
+	symbolLocker(layerList, true, ' is now locked');
 }
 
 var unlock = function(context) {
 	var currentPage = context.document.currentPage();
 	var layerList = currentPage.layers().array();
 
-	for (var i = layerList.count() - 1; i >= 0; i--) {
-		var layerListItem = layerList[i];
-		if (layerListItem.symbolID != undefined) {
-			layerListItem.setIsLocked(false);
-			log('The symbol ' + layerListItem.name() + ' is now unlocked');
-		}
-	}
+	symbolLocker(layerList, false, ' is now  unlocked');
+}
+
+var trackSymbolState = function(context) {
+
 }
 
 var onAction = function(context) {
