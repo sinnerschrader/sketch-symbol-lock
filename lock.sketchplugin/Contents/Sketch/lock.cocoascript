@@ -19,6 +19,7 @@ var unlock = function(context) {
 	var currentPage = context.document.currentPage();
 	var layerList = currentPage.layers().array();
 
+
 	symbolLocker(layerList, false, ' is now  unlocked');
 }
 
