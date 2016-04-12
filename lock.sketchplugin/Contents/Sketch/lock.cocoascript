@@ -60,7 +60,15 @@ function createSymbolsPage(context) {
 function createArtboard(context) {
 	// check for symbols on current page
 	// create artboard for each UNIQUE symbol, with dimensions of symbol group
+	var currentPage = context.document.currentPage();
+	var layerList = currentPage.layers().array();
 
+	for (var i = layerList.count() - 1; i >= 0; i--) {
+		var layer = layerList[i];
+		if (layer.symbolID != undefined || layer.isSymbol() == true) { // 3.6 Support (Object.isSymbol())
+			// layer.setIsLocked(true);
+		}
+	}
 }
 
 function lockSymbols(context) {
