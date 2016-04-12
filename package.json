@@ -1,0 +1,34 @@
+{
+  "name": "sketch-symbol-lock",
+  "version": "1.0.0",
+  "description": " prevents overwriting saved symbols and text styles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinnerschrader/sketch-symbol-lock.git"
+  },
+  "keywords": [
+    "sketch",
+    "symbols",
+    "textstyles"
+  ],
+  "author": "Mauricio Palma",
+  "contributors": [
+      {
+          "name": "Mauricio Palma",
+          "email": "mauricio.palma@sinnerschrader.com"
+      },
+      {
+          "name": "Markus Oelhafen",
+          "email": "markus.oelhafen@sinnerschrader.com"
+      }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sinnerschrader/sketch-symbol-lock/issues"
+  },
+  "homepage": "https://github.com/sinnerschrader/sketch-symbol-lock#readme"
+}
